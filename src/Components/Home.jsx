@@ -56,7 +56,7 @@ export default function Home() {
             </li>
           </ul>
           <button className="btn draw-border" onClick={() => window.location.href = 'https://drive.google.com/file/d/1HCt9q10-CUARP1KeeZuFk12N5nbYye02/view?usp=sharing'} >View CV</button>
-          <button className="btn draw-border">Contact me</button>
+          <button className="btn draw-border" onClick={() => window.location.href = 'https://wa.me/9234763827'}>Contact me</button>
         </div>
       </div>
     </div>
