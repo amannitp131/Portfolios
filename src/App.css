@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box; /* Include padding and border in element's total width */
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  height: 100vh;
+}
+
+.app-background {
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1; 
+}
+
+.content {
+  color: white; 
+  text-align: center;
+  padding: 20px;
+}
+
+

@@ -1,0 +1,196 @@
+/* Projects.css */
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+.heading1{
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  margin-left: 250px;
+}
+#second_row{
+  padding-bottom: 50px;
+  
+}
+/* Wrapper to center the cards */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Each individual project card */
+.projects-container {
+  width: 320px;
+  height: 400px;
+  perspective: 1500px;
+  margin: 10px;
+}
+
+/* Flip effect container */
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+/* Hide checkbox for flipping effect */
+.more {
+  display: none;
+}
+
+/* Apply the flip when checkbox is checked */
+.more:checked ~ .content {
+  transform: rotateY(180deg);
+}
+#project_name {
+  font-family: "Montserrat", sans-serif; 
+  font-weight: bolder; 
+  font-size: 1.7em; 
+  color: #333; 
+  text-align: center; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  padding: 10px;
+  background: linear-gradient(90deg, #ff7e5f, #90b310); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  display: inline-block; 
+}
+
+
+/* Front and back of the card */
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px); 
+}
+
+/* Front of the card with background image */
+.front {
+  background-image: url('src/assets/userimage.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+/* Inner content for the front */
+.front .inner {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  transform: translateZ(80px) scale(0.95);
+  text-align: center;
+  color: #fff;
+}
+
+/* Project name on the front */
+.front h2 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+/* Review button */
+.front .button {
+  padding: 10px 20px;
+  background-color: rgba(52, 152, 219, 0.8);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.front .button:hover {
+  background-color: rgba(41, 128, 185, 0.8); /* Darker transparent blue */
+}
+
+/* Button group (View Code, Live Demo) */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Individual buttons inside button group */
+.button-group .button {
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-group .button:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+/* Back of the card with description */
+.back {
+  transform: rotateY(180deg);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Inner content for the back */
+.back .inner {
+  text-align: center;
+}
+
+/* Description text */
+.back .description {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  color: #e0e0e0;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+/* Return button on the back */
+.button.return {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button.return:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+.button{
+  margin-top: 90px;
+}

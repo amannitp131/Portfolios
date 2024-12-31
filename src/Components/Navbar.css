@@ -1,0 +1,105 @@
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+ 
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+ 
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+ 
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffae42; 
+  }
+  
+ 
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1rem;
+      border-radius: 0 0 15px 15px;
+      transform: translateY(-300px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+  
+    .nav-links.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+    .nav-links li a {
+      color: rgb(238, 234, 234);
+      font-weight: bold;
+    }
+  
+    .nav-links li a:hover {
+        color: #ffae42; 
+    }
+  }
+  
